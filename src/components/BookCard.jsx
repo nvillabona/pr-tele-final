@@ -11,7 +11,7 @@ const BookCard = ({ book, fetchBooks }) => {
 
     const submitEditBook = async (e) => {
         e.preventDefault()
-        fetch(`http://localhost:5000/books/${editBook.id}`, {
+        fetch(`http://192.168.60.3:5000/books/${editBook.id}`, {
             method: "PUT",
             redirect: 'follow',
             headers: {
@@ -29,7 +29,7 @@ const BookCard = ({ book, fetchBooks }) => {
     const handleDeleteBook = () => {
         const result = window.confirm('Do you want to delete this book?');
         if (result) {
-            fetch(`http://localhost:5000/books/${editBook.id}`, {
+            fetch(`http://192.168.60.3:5000/books/${editBook.id}`, {
                 method: "DELETE",
             })
                 .then(() => {

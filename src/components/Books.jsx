@@ -10,7 +10,7 @@ const Books = () => {
 
     const fetchBooks = async () => {
         setIsLoading(true);
-        const response = await fetch("http://localhost:5000/books");
+        const response = await fetch("http://192.168.60.3:5000/books");
         const data = await response.json();
         setBooks(data.books);
         setIsLoading(false);

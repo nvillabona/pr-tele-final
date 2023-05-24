@@ -12,7 +12,7 @@ const BookCreateForm = () => {
     });
     const handleCreateBook = (e) => {
         e.preventDefault()
-        fetch(`http://localhost:5000/books`, {
+        fetch(`http://192.168.60.3:5000/books`, {
             method: "POST",
             redirect: 'follow',
             headers: {
